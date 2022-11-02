@@ -1,26 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import Confirmed from 'components/molecules/Confirmed';
+import Form from 'components/molecules/Form';
+import './styles/style.scss';
+import FormInfo from 'components/molecules/FormInfo';
+import ConfirmedInfo from 'components/molecules/ConfirmedInfo';
 
-function App() {
+const App = () => {
+  const initialFormState = {
+    name: '',
+    company: '',
+    street: '',
+    streetNumber: '',
+    city: '',
+    zipCode: '',
+    province: '',
+    prefix: '+48',
+    telephone: '',
+    email: '',
+    pesel: '',
+    nip: '',
+  };
+
+  const [formValue, setFormValue] = useState(initialFormState);
+
+  const [isConfirmed, setIsConfirmed] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {!isConfirmed ? (
+        <div className="app">
+          <FormInfo />
+          <Form {...{ setFormValue, setIsConfirmed }} />
+        </div>
+      ) : null}
+      {isConfirmed ? (
+        <div className="app">
+          <ConfirmedInfo />
+          <Confirmed {...formValue} />
+        </div>
+      ) : null}
+    </>
   );
-}
+};
 
 export default App;

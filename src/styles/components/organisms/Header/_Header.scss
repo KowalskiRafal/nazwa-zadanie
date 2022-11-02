@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+  margin-bottom: 25px;
+  padding: 20px 0;
+  background-color: $c-darkBlue;
+
+  @include breakpoint(md-up) {
+    flex-direction: row;
+  }
+
+  &__title {
+    @include font-size(30);
+    color: $c-white;
+    font-weight: 700;
+    padding: 0 10px;
+    text-align: center;
+
+    @include breakpoint(md-up) {
+      padding-left: 50px;
+    }
+  }
+
+  svg {
+    width: 150px;
+    height: 150px;
+    color: $c-white;
+
+    @include breakpoint(md-up) {
+      margin-left: 30px;
+    }
+  }
+}

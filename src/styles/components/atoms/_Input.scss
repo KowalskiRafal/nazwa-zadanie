@@ -1,0 +1,51 @@
+.input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
+  @include breakpoint(md-up) {
+    flex-direction: row;
+  }
+
+  &__wrapper {
+    display: flex;
+  }
+
+  #name,
+  #company,
+  #email,
+  #pesel,
+  #nip {
+    width: 255px;
+  }
+
+  #telephone {
+    order: 2;
+  }
+
+  label {
+    display: inline-block;
+    padding: 0 10px 10px 0;
+    text-align: right;
+    font-weight: 500;
+
+    @include breakpoint(md-up) {
+      width: 250px;
+    }
+  }
+
+  &__first-input,
+  &__second-input {
+    margin: 0 10px 10px 0;
+    padding: 5px;
+    border: 1px solid $c-gray;
+    box-shadow: inset 1px 2px 8px rgba(0, 0, 0, 0.07);
+    outline: none;
+  }
+
+  &__second-input {
+    max-width: 70px;
+  }
+}

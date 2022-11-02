@@ -1,0 +1,9 @@
+.app {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  @include breakpoint(md-up) {
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,33 @@
+.button {
+  width: 150px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 20px;
+
+  &--save,
+  &--cancel {
+    padding: 12px 40px;
+    background-color: $c-lightBlue;
+    color: $c-white;
+    transition: $transition-base;
+
+    &:hover {
+      background-color: $c-darkBlue;
+    }
+  }
+
+  &--cancel {
+    background-color: $c-white;
+    color: $c-darkBlue;
+    font-weight: 600;
+    transition: $transition-base;
+
+    &:hover {
+      color: $c-red;
+      background-color: $c-white;
+    }
+  }
+}

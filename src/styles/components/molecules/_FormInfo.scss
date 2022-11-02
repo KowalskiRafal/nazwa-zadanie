@@ -1,0 +1,28 @@
+.form-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 850px;
+
+  &__text {
+    @include font-size(25);
+    padding: 0 10px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: $c-darkBlue;
+    font-weight: 600;
+  }
+
+  svg {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 30px;
+    color: $c-darkBlue;
+
+    @include breakpoint(md-up) {
+      width: 200px;
+      height: 200px;
+    }
+  }
+}

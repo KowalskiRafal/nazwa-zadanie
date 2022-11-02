@@ -1,0 +1,69 @@
+.form {
+  max-width: 100%;
+  padding: 10px;
+
+  @include breakpoint(md-up) {
+    width: 850px;
+  }
+
+  &__heading {
+    color: $c-gray;
+    font-weight: 500;
+  }
+
+  &__radio-input-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    padding-bottom: 15px;
+
+    @include breakpoint(md-up) {
+      flex-direction: row;
+      padding-left: 92px;
+    }
+  }
+
+  &__radio-input {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__label {
+    display: inline-block;
+    padding: 0 10px 10px 0;
+    text-align: right;
+    font-weight: 500;
+
+    @include breakpoint(md-up) {
+      width: 250px;
+    }
+  }
+
+  &__select-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include breakpoint(md-up) {
+      flex-direction: row;
+    }
+  }
+
+  &__select {
+    width: 254px;
+    margin: 0 10px 10px 0;
+    padding: 5px;
+    border: 1px solid $c-gray;
+    box-shadow: inset 1px 2px 8px rgba(0, 0, 0, 0.07);
+    outline: none;
+    font-weight: bold;
+  }
+
+  &__button-wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
