@@ -208,7 +208,10 @@ const Form = ({ setFormValue, setIsConfirmed }: DataFormType) => {
         )}
         <hr />
         <div className="form__button-wrapper">
-          <Button label="Anuluj" variant={cancelButtonVariant} />
+          <Button label="Anuluj" variant={cancelButtonVariant} onClick={(e) => {
+            e.preventDefault();
+            window.location.href = 'http://google.com';
+          }}/>
           <Button label={buttonLabel} variant={saveButtonVariant} />
         </div>
       </form>
